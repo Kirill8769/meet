@@ -9,11 +9,11 @@ def get_list_films(list_dict: list, genre: str) -> list:
     :return: Возвращает новый список,
     содержащий только те фильмы, которые относятся к заданному жанру.
     """
-    result = [film for film in list_dict if film['genre'] == genre]
+    result = [film for film in list_dict if film['genre'] == genre.title()]
     return result
 
 
-print(get_list_films([
+print(get_list_films(list_dict=[
     {
         'title': 'The Shawshank Redemption',
         'genre': 'Drama',
@@ -29,4 +29,4 @@ print(get_list_films([
         'genre': 'Action',
         'director': 'Christopher Nolan'
     }
-], genre='Drama'))
+], genre='drama'))
